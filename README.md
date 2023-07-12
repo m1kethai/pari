@@ -23,7 +23,7 @@ Replace `[pkgname]` with the name of the package you want to query. Pari will re
 ## Example
 
 ```
-$ ./pari jupyter-notebook
+$ ./pari gimp
 
 Repository      : extra
 Name            : gimp
