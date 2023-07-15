@@ -1,18 +1,19 @@
-# Pari: a simple `paru` wrapper for displaying extra package details
+# Pari
 
-Pari (paru + info) is a simple wrapper script for the Paru package manager that enhances the `paru -Si [pkgname]` command by appending the corresponding package URL to the output. It makes it convenient to retrieve package information and quickly access relevant URLs.
+Pari (Paru + info) is a simple wrapper script for the Paru package manager that enhances the default output of `paru -Si [pkgname]` to provide additional useful info about the package.
+> *The package's source URL is the only extra info Pari provides at the moment, but a couple other very handy features are currently in development and will be added in future releases.*
+  
+### What it does:
 
-## Features
+1. Retrieves the detailed package information using `paru -Si`
+2. Builds the corresponding Arch, AUR, Chaotic-AUR, or BlackArch (more repos to be supported soon) URL based on the package's source repository.
+3. Outputs the full set of package details with the new URL appended to the bottom.
 
-- Retrieves detailed package information using `paru -Si`.
-- Appends the corresponding AUR, Arch, Chaotic-AUR, or BlackArch URL to the package information based on the package's source repository.
-- Provides a comprehensive view of a package's details & associated URLs in a single output.
-
-## Prerequisites
+### Prerequisites:
 
 - [Paru](https://github.com/Morganamilo/paru) - Paru is an AUR helper for Arch Linux and Arch-based distributions. Make sure Paru is installed and configured properly before using Pari.
 
-## Usage
+### Usage:
 
 To use Pari, simply execute the script with the desired package name as an argument:
 
@@ -20,7 +21,7 @@ To use Pari, simply execute the script with the desired package name as an argum
 
 Replace `[pkgname]` with the name of the package you want to query. Pari will retrieve the package information using `paru -Si`, extract the appropriate URL based on the repository, and append it to the output.
 
-## Example
+### Example:
 
 ```
 $ ./pari gimp
